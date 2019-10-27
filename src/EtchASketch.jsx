@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 
-const size = 1;
+const scale = 1;
+const frameWidth = 85;
 
 const frameStyling = {
   backgroundColor: 'blue',
-  height: 300 * size + 2 * 85 * size + 'px',
-  width: 400 * size + 2 * 85 * size + 'px',
+  height: 300 * scale + 2 * frameWidth + 'px',
+  width: 400 * scale + 2 * frameWidth + 'px',
   position: 'relative',
-  borderRadius: 5 * size + 'px',
+  borderRadius: 5 * scale + 'px',
 };
 
 const screenStyling = {
   backgroundColor: 'lightGrey',
-  height: 300 * size + 'px',
-  width: 400 * size + 'px',
+  height: `calc(100% - ${2 * frameWidth}px)`,
+  width: `calc(100% - ${2 * frameWidth}px)`,
   position: 'absolute',
-  top: 85 * size + 'px',
-  left: 85 * size + 'px',
-  borderRadius: 10 * size + 'px',
+  top: frameWidth + 'px',
+  left: frameWidth + 'px',
+  borderRadius: 10 * scale + 'px',
 };
 
 const controlsStyling = {
@@ -26,13 +27,13 @@ const controlsStyling = {
   justifyContent: 'space-between',
   position: 'absolute',
   bottom: '0px',
-  padding: '3px',
+  padding: '10px',
   boxSizing: 'border-box',
 };
 
 const knobStyling = {
-  height: 80 * size + 'px',
-  width: 80 * size + 'px',
+  height: 80 + 'px',
+  width: 80 + 'px',
   backgroundColor: 'white',
   borderRadius: '50%',
 };
